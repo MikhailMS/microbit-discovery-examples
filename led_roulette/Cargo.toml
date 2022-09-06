@@ -1,0 +1,18 @@
+[package]
+name    = "led_roulette"
+version = "0.2.0"
+authors = ["Henrik Böving <hargonix@gmail.com>", "Mikhail Molotkov"]
+edition = "2018"
+
+[dependencies]
+cortex-m         = "0.7.3"
+cortex-m-rt      = "0.7.0"
+cortex-m-rtic    = { version = "0.5", default-features = false, features = ["cortex-m-7"] }
+microbit-v2      = "0.12.0"
+panic-halt       = "0.2.0"
+
+[profile.release]
+# Uncomment below options only when building without RTT and/or GDB
+strip     = true # Automatically strip symbols from the binary.
+opt-level = "z"  # Optimize for size.
+lto       = true # Instructs the linker to optimize at the link stage

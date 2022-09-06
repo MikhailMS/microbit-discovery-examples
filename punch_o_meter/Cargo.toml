@@ -1,0 +1,23 @@
+[package]
+name    = "punch-o-meter"
+version = "0.1.0"
+authors = ["Mikhail Molotkov"]
+edition = "2018"
+
+[dependencies]
+cortex-m         = "0.7.3"
+cortex-m-rt      = "0.7.0"
+microbit-v2      = "0.12.0"
+# panic-halt       = "0.2.0"
+embedded-hal     = "0.2.6"
+# heapless         = "0.7.10"
+lsm303agr        = "0.2.2"
+nb               = "1.0.0"
+panic-rtt-target = { version = "0.1.2", features = ["cortex-m"] }
+rtt-target       = { version = "0.3.1", features = ["cortex-m"] }
+
+[profile.release]
+# Uncomment below options only when building without RTT and/or GDB
+# strip     = true # Automatically strip symbols from the binary.
+# opt-level = "z"  # Optimize for size.
+# lto       = true # Instructs the linker to optimize at the link stage
